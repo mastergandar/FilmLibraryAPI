@@ -8,7 +8,7 @@ from films.enums import FilmCategory, Country
 class Film(models.Model):
     provider = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     name = models.CharField('Film name', max_length=255, default='No name')
-    category = models.IntegerField('Category', choices=FilmCategory.choices, default=FilmCategory.UNCATEGORIZED.value)
+    category = models.IntegerField('Category', choices=FilmCategory.choices, default=FilmCategory.BOEVICK.value)
     country = models.IntegerField('Country', choices=Country.choices, default=Country.NOCOUNTRY.value)
     description = models.TextField('Description', default='')
     actor = models.CharField('Actor', max_length=250, default='None')
