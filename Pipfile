@@ -11,6 +11,8 @@ psycopg2-binary = "*"
 django-filter = "*"
 pytest = "*"
 pillow = "*"
+gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 
