@@ -13,6 +13,8 @@ pytest = "*"
 pillow = "*"
 gunicorn = "*"
 whitenoise = "*"
+django-cloudinary-storage = "*"
+cloudinary = "*"
 
 [dev-packages]
 

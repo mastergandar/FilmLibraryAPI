@@ -13,7 +13,7 @@ class Film(models.Model):
     description = models.TextField('Description', default='')
     actor = models.CharField('Actor', max_length=250, default='None')
 
-    image = models.ImageField('Poster', null=True, blank=True)
+    image = models.ImageField('Poster', null=True, blank=True, upload_to='images/')
 
     created_at = models.DateTimeField('Created at', auto_now_add=True)
     updated_at = models.DateTimeField('Updated at', auto_now=True)

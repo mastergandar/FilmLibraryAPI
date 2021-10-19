@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'rest_framework',
     'rest_framework.authtoken',
     'drf_yasg',
@@ -170,8 +172,16 @@ SWAGGER_SETTINGS = {
     }
 }
 
+CLOUDINARY_STORAGE = {
+             'CLOUD_NAME': 'hvlarux9m',
+             'API_KEY': '275313118488186',
+             'API_SECRET': 'K27pTY4jJD-qVy0NeWBD1MU--IE'
+            }
+
 # Base url to serve media files
 MEDIA_URL = '/media/'
 
 # Path where media is stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'
