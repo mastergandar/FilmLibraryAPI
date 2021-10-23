@@ -11,6 +11,7 @@ class FilmSerializer(serializers.ModelSerializer):
         fields = [
             'pk',
             'provider',
+            'film_id',
             'name',
             'category',
             'country',
