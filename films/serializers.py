@@ -13,6 +13,7 @@ class FilmSerializer(serializers.ModelSerializer):
             'provider',
             'film_id',
             'name',
+            'disk_name',
             'category',
             'country',
             'description',
