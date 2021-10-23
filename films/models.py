@@ -8,6 +8,7 @@ class Film(models.Model):
     provider = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     film_id = models.IntegerField('Film id', default=0)
     name = models.CharField('Film name', max_length=255, default='No name')
+    disk_name = models.CharField('Disk name', max_length=255, default='No name', null=True, blank=True)
     category = models.IntegerField('Category', choices=FilmCategory.choices, default=FilmCategory.BOEVICK.value)
     country = models.IntegerField('Country', choices=Country.choices, default=Country.NOCOUNTRY.value)
     description = models.TextField('Description', default='')
