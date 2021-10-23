@@ -11,7 +11,8 @@ router = routers.SimpleRouter()
 
 urlpatterns = [
     path('', views.FilmListCreateView.as_view(), name='list_create'),
-    path('<int:pk>', views.FilmRetrieveUpdateDestroy.as_view(), name='retrieve_update_destroy'),
+    path('<int:pk>', views.FilmUpdateDestroy.as_view(), name='retrieve_update_destroy'),
+    path('<str:name>', views.FilmSearch.as_view(), name='search'),
 ]
 
 urlpatterns += router.urls
